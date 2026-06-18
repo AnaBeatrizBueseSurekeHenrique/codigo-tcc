@@ -1,7 +1,7 @@
 from loop_genetico import LoopGenetico
 
 def main():
-   loopGenetico = LoopGenetico('..\\conjuntos_de_dados\\ptbr-en_informal.csv', "..\\conjuntos_de_dados\\ptbr-en_formal.csv", modelo_original="Helsinki-NLP/opus-mt-tc-big-en-pt", tamanho_populacao=4, geracoes=3, porcentagemCruzamento=0.7,porcentagemMutacao=0.5, maxPaciencia=4, quantidade_linhas=10)
+   loopGenetico = LoopGenetico(caminho_dataset='CAMINHO_DATASET',caminho_frases_avaliar= "CAMINHO_FRASES_AVALIAR", modelo_original="MODELO_ORIGINAL", tamanho_populacao=10, geracoes=10, porcentagemCruzamento=0.7,porcentagemMutacao=0.5, maxPaciencia=4, quantidade_linhas=100)
    loopGenetico.loop()
     
 if __name__ == "__main__":

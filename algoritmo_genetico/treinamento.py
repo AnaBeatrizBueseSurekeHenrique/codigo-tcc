@@ -57,7 +57,6 @@ class Treinamento():
     def iniciar(self, dataset):
         id = dataset.id
         print(f'Iniciando treinamento {id}')
-        print(self.modeloOriginal)
         model = AutoModelForSeq2SeqLM.from_pretrained(self.modeloOriginal,   
                                                     use_safetensors=True)
         ds = self.load_dataset(dataset.frases)
